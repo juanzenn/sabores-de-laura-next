@@ -1,4 +1,5 @@
 import Button from '../UI/Button'
+import Link from 'next/link'
 
 export default function Header() {
   return (
@@ -10,7 +11,11 @@ export default function Header() {
         </div>
         <div className="text-center">
           <p className="text-4xl mb-4 max-w-lg font-medium">Tortas, dulces fríos, coffee cakes y más</p>
-          <Button>Menú</Button>
+          <Button fontSize="xl">
+            <Link href="/menu">
+              <a>Menú</a>
+            </Link>
+          </Button>
         </div>
       </div>
     </section>
