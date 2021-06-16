@@ -1,8 +1,22 @@
 import Head from 'next/head'
+import Header from '../components/IndexSections/Header'
+import Gallery from '../components/IndexSections/Gallery'
+import MenuCategories from '../components/IndexSections/MenuCategories'
+import Values from '../components/IndexSections/Values'
+import Contact from '../components/IndexSections/Contact'
 
 export default function Home() {
   return (
-    <div className="bg-gray-500">Hello world</div>    
+    <>
+      <Head>
+        <title>Sabores de Laura</title>
+      </Head>
+
+      <Header />
+      <Gallery />
+      <MenuCategories />
+      <Values />
+      <Contact />
+    </>
   )
 }
-
