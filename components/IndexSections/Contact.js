@@ -19,7 +19,7 @@ export default function Contact() {
             Envianos un WhatsApp y pide tu postre
           </h2>
 
-          <Button>
+          <Button style={{display: 'inline-block'}}>
             <Link href="/contact">
               <a>Contacto</a>
             </Link>

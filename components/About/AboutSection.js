@@ -24,8 +24,8 @@ export default function AboutSection(props) {
           ></div>
         </AboutCol>
         <AboutCol>
-          <h2 className="font-bold text-4xl">{props.title}</h2>
-          <p className="text-base leading-relaxed text-gray-600">
+          <h2 className="font-bold text-4xl text-pink-600">{props.title}</h2>
+          <p className="text-base leading-relaxed text-gray-500">
             {props.content}
           </p>
         </AboutCol>

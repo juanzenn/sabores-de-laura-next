@@ -37,7 +37,7 @@ export default function MenuNavigation({ selectCategory }) {
   ]
 
   return (
-    <div className="bg-pink-500 mb-4 flex items-center">
+    <div className="bg-pink-500 mb-4 flex items-center pl-2 lg:pl-12 overflow-scroll lg:overflow-hidden">
       <ul className="flex gap-2">
         {items.map((item, index) => (
           <NavItem

@@ -39,21 +39,17 @@ export default function Footer() {
 
   const footerInfo = [
     {
-      title: "title",
-      info: "info",
+      title: "Ubicación",
+      info: "Venezuela, estado Miranda, San Antonio de los Altos",
     },
     {
-      title: "title",
-      info: "info",
+      title: "Teléfono",
+      info: "+58 414-123-4567",
     },
     {
-      title: "title",
-      info: "info",
-    },
-    {
-      title: "title",
-      info: "info",
-    },
+      title: "Horarios",
+      info: "8:00am - 6:00pm",
+    },    
   ]
 
   return (
