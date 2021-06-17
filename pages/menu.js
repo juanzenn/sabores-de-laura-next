@@ -107,7 +107,9 @@ export default function Menu() {
       <Head>
         <title>Sabores de Laura - Menú</title>
       </Head>
-      <main>        
+      <main className="min-h-screen my-12 lg:my-24">
+        <h2 className='font-bold text-4xl px-2'>Menu</h2>        
+        <p className='text-gray-500 mb-4 text-sm px-2'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet voluptates sint reiciendis sit et aut ea! Nobis odio quasi porro natus, minus quia facilis harum unde optio quae facere fugiat.</p>
         <MenuNavigation selectCategory={handleClick} />        
         <div className="container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-4 my-6">
           {/* Filter the array with "category"

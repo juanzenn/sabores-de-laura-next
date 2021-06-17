@@ -11,7 +11,7 @@ const GridItem = (props) => {
 
 export default function Mission() {
   return (
-    <section>
+    <section className="my-12">
       <div className="container mx-auto">
         <h2 className="font-bold text-4xl text-center text-pink-600 mb-6">Nuestra misión</h2>
         <div className="grid lg:grid-cols-3 gap-4">

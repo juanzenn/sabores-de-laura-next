@@ -9,7 +9,7 @@ export default function About() {
     <Head>
       <title>Sabores de Laura - Historia</title>
     </Head>
-    <main>
+    <main className="min-h-screen my-12 lg:my-24">
       <AboutSection
         title="The quick fox Jumps"
         content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium

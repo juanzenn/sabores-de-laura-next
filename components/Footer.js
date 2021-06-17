@@ -57,7 +57,7 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-pink-900 text-pink-300 pt-4 pb-24">
+    <footer className="bg-pink-900 text-pink-300 pt-4 pb-24 px-4">
       <div className="container mx-auto flex flex-col lg:flex-row gap-4 lg:gap-24">
         <div>
           <h4 className="font-bold text-3xl mb-4">Sabores de Laura</h4>
