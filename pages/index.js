@@ -12,11 +12,13 @@ export default function Home() {
         <title>Sabores de Laura</title>
       </Head>
 
-      <Header />
-      <Gallery />
-      <MenuCategories />
-      <Values />
-      <Contact />
+      <main className="min-h-screen">
+        <Header />
+        <Gallery />
+        <MenuCategories />
+        <Values />
+        <Contact />
+      </main>
     </>
   )
 }

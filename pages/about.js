@@ -9,9 +9,9 @@ export default function About() {
     <Head>
       <title>Sabores de Laura - Historia</title>
     </Head>
-    <main>
+    <main className="min-h-screen my-12 lg:my-24">
       <AboutSection
-        title="The quick fox Jumps"
+        title="Un nuevo comienzo"
         content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium
             illum in quisquam! Eveniet assumenda similique dicta! Magni aperiam
             voluptate corporis deserunt, eaque quam expedita? Provident, magnam.
@@ -20,7 +20,7 @@ export default function About() {
             tempora deleniti error, dolores, asperiores nam at soluta."
       />
       <AboutSection
-        title="The quick fox Jumps"
+        title="Hobbie que se convirtió en profesión"
         content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium
             illum in quisquam! Eveniet assumenda similique dicta! Magni aperiam
             voluptate corporis deserunt, eaque quam expedita? Provident, magnam.
@@ -30,7 +30,7 @@ export default function About() {
         reverse={true}
       />
       <AboutSection
-        title="The quick fox Jumps"
+        title="Nos gustan los postres"
         content="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium
             illum in quisquam! Eveniet assumenda similique dicta! Magni aperiam
             voluptate corporis deserunt, eaque quam expedita? Provident, magnam.
