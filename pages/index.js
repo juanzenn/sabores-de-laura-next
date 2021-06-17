@@ -13,10 +13,10 @@ export default function Home() {
       </Head>
 
       <main className="min-h-screen">
-        <Header />
-        <Gallery />
+        <Header />        
         <MenuCategories />
         <Values />
+        <Gallery />
         <Contact />
       </main>
     </>

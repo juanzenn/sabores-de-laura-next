@@ -5,28 +5,32 @@ export default function MenuCategories() {
   const items = [
     {
       title: "Tortas",
+      bg: 'bg-cake bg-cover bg-center bg-no-repeat'
     },
     {
-      title: "Galletas",
+      title: "Tartaletas",
+      bg: 'bg-lemon-pie bg-cover bg-bottom bg-no-repeat'
     },
     {
       title: "Cupcakes",
+      bg: 'bg-cupcakes bg-cover bg-center bg-no-repeat'
     },
     {
-      title: "Otros",
+      title: "Y mucho más...",
+      bg: 'bg-pavlova bg-cover bg-center bg-no-repeat'
     },
   ]
 
   function CategoriesGrid(props) {
     return (
-      <div className="text-center w-10/12">        
+      <div className="text-center w-full lg:w-10/12">        
         <div className="grid grid-cols-2 gap-4 content-center">
           {props.items.map((item, index) => (
             <div
               key={index}
-              className=" bg-gradient-to-br from-pink-400 to-pink-600 w-full h-48 flex justify-center items-center rounded-lg"
+              className={`${item.bg} w-full h-80 flex justify-center items-center rounded-lg px-4`}
             >
-              <p className="font-bold bg-white text-pink-500 px-6 py-1 text-xl rounded-sm bg-opacity-75">
+              <p className="font-bold bg-white text-pink-500 px-6 py-1 text-xl lg:text-3xl rounded-full">
                 {item.title}
               </p>
             </div>
@@ -37,11 +41,8 @@ export default function MenuCategories() {
   }
 
   return (
-    <section className="px-4 py-16">
-      <div className="container mx-auto flex flex-col justify-center items-center">
-        <h2 className="text-4xl font-bold mb-8 text-pink-600 w-">
-          Tenemos postres para todos los gustos
-        </h2>
+    <section className="px-4 py-16 bg-gradient-to-bl from-pink-50 to-pink-100">
+      <div className="container mx-auto flex flex-col justify-center items-center">        
         <CategoriesGrid title="Categorías" items={items} />
         <Button fontSize="3xl" width='2/4'>
           <Link href="/menu">

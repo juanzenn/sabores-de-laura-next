@@ -7,8 +7,10 @@ export default function Contact() {
       <div className="grid lg:grid-cols-3 gap-4">
         <div></div>
         <div className="flex flex-col gap-4">
-          <h4 className="font-bold text-2xl text-center text-pink-600">¡Visita nuestro menú!</h4>
-        <Button  width='full'>
+          <h4 className="font-bold text-2xl text-center text-yellow-500">
+            ¡Visita nuestro menú!
+          </h4>
+          <Button width="full">
             <Link href="/menu">
               <a>Menú</a>
             </Link>
@@ -19,7 +21,7 @@ export default function Contact() {
             Envianos un WhatsApp y pide tu postre
           </h2>
 
-          <Button style={{display: 'inline-block'}}>
+          <Button style={{ display: "inline-block" }}>
             <Link href="/contact">
               <a>Contacto</a>
             </Link>

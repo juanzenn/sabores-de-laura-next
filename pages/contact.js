@@ -36,7 +36,7 @@ export default function contact() {
           <h2 className="text-4xl font-bold mb-4">Contacto</h2>
           <section className="flex flex-col-reverse lg:flex-row gap-6 lg:gap-0">
             <div className="w-full">
-              <h3 className="text-2xl text-pink-600 font-bold              ">
+              <h3 className="text-2xl text-yellow-600 font-bold              ">
                 Información
               </h3>
               {contactInfo.map((item, index) => (
@@ -49,7 +49,7 @@ export default function contact() {
             </div>
             <div className="w-full">
               <div className="mb-4">
-                <h3 className="font-bold text-2xl lg:text-3xl text-pink-600">
+                <h3 className="font-bold text-2xl lg:text-3xl text-yellow-600">
                   Envíanos un mensaje por WhatsApp y haz tu pedido
                 </h3>
                 <p className="text-gray-500 text-sm">
@@ -58,7 +58,7 @@ export default function contact() {
                 </p>
               </div>
 
-              <form className=" bg-gradient-to-br from-pink-100 to-pink-200 flex flex-col gap-4 py-4 px-6 shadow-lg items-end rounded-lg">
+              <form className=" bg-gradient-to-br from-yellow-50 to-yellow-100 flex flex-col gap-4 py-4 px-6 shadow items-end rounded-lg">
                 <div className="flex flex-col gap-2 w-full">
                   <label
                     htmlFor="message"
@@ -71,7 +71,7 @@ export default function contact() {
                     id="message"
                     cols="30"
                     rows="10"
-                    className="p-2 text-sm resize-none rounded-md shadow-md bg-white bg-opacity-40 text-gray-700 focus:outline-none focus:ring focus:ring-pink-400 border hover:border-pink-400 transition-all ease-out"
+                    className="p-2 text-sm resize-none rounded bg-white bg-opacity-40 text-gray-700 focus:outline-none focus:ring focus:ring-pink-400 border-2 border-pink-300 hover:border-pink-400 focus:border-pink-400 transition-all ease-out"
                   ></textarea>
                 </div>
                 <Button type="submit">Envíar</Button>

@@ -16,73 +16,73 @@ export default function Menu() {
       {
         title: 'Cupcake 1',
         price: '15',
-        color: 'pink-400',
+        color: 'yellow-400',
         category: 'cupcake'
       },
       {
         title: 'Cupcake 2',
         price: '15',
-        color: 'pink-400',
+        color: 'yellow-400',
         category: 'cupcake'
       },
       {
         title: 'Cupcake 3',
         price: '15',
-        color: 'pink-400',
+        color: 'yellow-400',
         category: 'cupcake'
       },
       {
         title: 'Torta 1',
         price: '40',
-        color: 'pink-500',
+        color: 'yellow-500',
         category: 'cake'
       },
       {
         title: 'Torta 2',
         price: '40',
-        color: 'pink-500',
+        color: 'yellow-500',
         category: 'cake'
       },
       {
         title: 'Torta 3',
         price: '40',
-        color: 'pink-500',
+        color: 'yellow-500',
         category: 'cake'
       },
       {
         title: 'Pie 1',
         price: '35',
-        color: 'pink-600',
+        color: 'yellow-600',
         category: 'pie'
       },
       {
         title: 'Pie 2',
         price: '35',
-        color: 'pink-600',
+        color: 'yellow-600',
         category: 'pie'
       },
       {
         title: 'Pie 3',
         price: '35',
-        color: 'pink-600',
+        color: 'yellow-600',
         category: 'pie'
       },
       {
         title: 'Galleta 1',
         price: '5',
-        color: 'pink-700',
+        color: 'yellow-700',
         category: 'cookie'
       },
       {
         title: 'Galleta 2',
         price: '5',
-        color: 'pink-700',
+        color: 'yellow-700',
         category: 'cookie'
       },
       {
         title: 'Galleta 3',
         price: '5',
-        color: 'pink-700',
+        color: 'yellow-700',
         category: 'cookie'
       },
   

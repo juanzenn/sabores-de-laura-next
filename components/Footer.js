@@ -4,7 +4,9 @@ import Link from "next/link"
 const FooterLink = (props) => {
   return (
     <Link href={props.href}>
-      <a className="hover:text-pink-500 transition-all duration-300">{props.title}</a>
+      <a className="hover:text-yellow-400 transition-all duration-300">
+        {props.title}
+      </a>
     </Link>
   )
 }
@@ -49,13 +51,13 @@ export default function Footer() {
     {
       title: "Horarios",
       info: "8:00am - 6:00pm",
-    },    
+    },
   ]
 
   return (
-    <footer className="bg-pink-900 text-pink-300 pt-4 pb-24 px-4">
+    <footer className="bg-gray-900 text-yellow-100 py-12 px-4">
       <div className="container mx-auto flex flex-col lg:flex-row gap-4 lg:gap-24">
-        <div>
+        <div className="w-full">
           <h4 className="font-bold text-3xl mb-4">Sabores de Laura</h4>
           <div className="flex flex-col gap-1">
             {footerLinks.map((item, index) => (
@@ -63,15 +65,20 @@ export default function Footer() {
             ))}
           </div>
         </div>
-        <div>
+        <div className="w-full">
           <h4 className="font-bold text-3xl mb-4">Información</h4>
           <div className="flex flex-col gap-1">
             {footerInfo.map((item, index) => (
-              <FooterInfo key={index} title={item.title} info={item.info}/>
+              <FooterInfo key={index} title={item.title} info={item.info} />
             ))}
           </div>
         </div>
+        <div className="w-full text-center">
+          <div className="h-48 w-48 inline-block bg-logo bg-cover bg-center bg-no-repeat rounded-full"></div>
+          <p className="text-xs text-gray-500">Sabores de Laura - Todos los derechos reservados</p>
+        </div>
       </div>
+      <p className="text-center text-sm text-gray-500 mt-12">Diseñado y programado con <strong className='text-blue-400'>♥</strong> en <a href="" className="hover:text-blue-400 transition-all duration-300">ZEN Websites</a></p>
     </footer>
   )
 }

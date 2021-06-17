@@ -5,7 +5,7 @@ const NavItem = (props) => {
     <li
       onClick={props.customEvent}
       category={props.category}
-      className="cursor-pointer hover:bg-pink-400 text-white transition-all p-2 tracking-wider"
+      className="cursor-pointer hover:bg-yellow-400 text-white transition-all p-2 tracking-wider"
     >
       {props.children}
     </li>
@@ -37,7 +37,7 @@ export default function MenuNavigation({ selectCategory }) {
   ]
 
   return (
-    <div className="bg-pink-500 mb-4 flex items-center pl-2 lg:pl-12 overflow-scroll lg:overflow-hidden">
+    <div className="bg-yellow-500 mb-4 flex items-center pl-2 lg:pl-12 overflow-scroll lg:overflow-hidden">
       <ul className="flex gap-2">
         {items.map((item, index) => (
           <NavItem
