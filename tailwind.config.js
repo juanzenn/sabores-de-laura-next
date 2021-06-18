@@ -24,7 +24,16 @@ module.exports = {
         'pavlova2': 'url(/images/pavlova2.webp)',
         'birthdaycake': 'url(/images/birthdaycake.svg)',
         'cookies': 'url(/images/cookies.svg)'
-      })
+      }),
+      keyframes: {
+        opacity: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' }
+        }
+      },
+      animation: {
+        opacity: 'opacity 300ms ease-out forwards '
+      }
     },
   },
   variants: {
