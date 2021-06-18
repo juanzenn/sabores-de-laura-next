@@ -1,4 +1,5 @@
 import React from "react"
+import Container from "../UI/Container"
 
 const GridItem = (props) => {
   return (
@@ -11,29 +12,29 @@ const GridItem = (props) => {
 
 export default function Mission() {
   return (
-    <section className="my-12">
-      <div className="container mx-auto">
-        <h2 className="font-bold text-4xl text-center text-yellow-600 mb-6">Nuestra misión</h2>
-        <div className="grid lg:grid-cols-3 gap-4">
-          <GridItem
-            title="Darles los mejores postres"
-            content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ipsa aperiam perspiciatis?
+    <Container sectionClasses="my-12" containerClasses="">
+      <h2 className="font-bold text-4xl text-center text-yellow-600 mb-6">
+        Nuestra misión
+      </h2>
+      <div className="grid lg:grid-cols-3 gap-4">
+        <GridItem
+          title="Darles los mejores postres"
+          content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ipsa aperiam perspiciatis?
             "
-          />
+        />
 
-          <GridItem
-            title="Un recuerdo innolvidable"
-            content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ipsa aperiam perspiciatis?
+        <GridItem
+          title="Un recuerdo innolvidable"
+          content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ipsa aperiam perspiciatis?
 "
-          />
+        />
 
-          <GridItem
-            title="Compartir nuestra historia"
-            content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ipsa aperiam perspiciatis?
+        <GridItem
+          title="Compartir nuestra historia"
+          content="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae ipsa aperiam perspiciatis?
             "
-          />          
-        </div>
+        />
       </div>
-    </section>
+    </Container>
   )
 }

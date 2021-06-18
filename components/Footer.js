@@ -55,8 +55,8 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-gray-900 text-yellow-100 py-12 px-4">
-      <div className="container mx-auto flex flex-col lg:flex-row gap-4 lg:gap-24">
+    <footer className="bg-gray-900 text-yellow-100 py-12">
+      <div className="`container mx-auto w-11/12 lg:w-10/12 flex flex-col lg:flex-row gap-4 lg:gap-24">
         <div className="w-full">
           <h4 className="font-bold text-3xl mb-4">Sabores de Laura</h4>
           <div className="flex flex-col gap-1">

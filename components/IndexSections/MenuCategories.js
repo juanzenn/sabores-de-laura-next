@@ -1,29 +1,30 @@
 import Button from "../UI/Button"
 import Link from "next/link"
+import Container from "../UI/Container"
 
 export default function MenuCategories() {
   const items = [
     {
       title: "Tortas",
-      bg: 'bg-cake bg-cover bg-center bg-no-repeat'
+      bg: "bg-cake bg-cover bg-center bg-no-repeat",
     },
     {
       title: "Tartaletas",
-      bg: 'bg-lemon-pie bg-cover bg-bottom bg-no-repeat'
+      bg: "bg-lemon-pie bg-cover bg-bottom bg-no-repeat",
     },
     {
       title: "Cupcakes",
-      bg: 'bg-cupcakes bg-cover bg-center bg-no-repeat'
+      bg: "bg-cupcakes bg-cover bg-center bg-no-repeat",
     },
     {
       title: "Y mucho más...",
-      bg: 'bg-pavlova bg-cover bg-center bg-no-repeat'
+      bg: "bg-pavlova bg-cover bg-center bg-no-repeat",
     },
   ]
 
   function CategoriesGrid(props) {
     return (
-      <div className="text-center w-full lg:w-10/12">        
+      <div className="text-center w-full">
         <div className="grid grid-cols-2 gap-4 content-center">
           {props.items.map((item, index) => (
             <div
@@ -41,15 +42,16 @@ export default function MenuCategories() {
   }
 
   return (
-    <section className="px-4 py-16 bg-gradient-to-bl from-pink-50 to-pink-100">
-      <div className="container mx-auto flex flex-col justify-center items-center">        
-        <CategoriesGrid title="Categorías" items={items} />
-        <Button fontSize="3xl" width='2/4'>
-          <Link href="/menu">
-            <a>Menú</a>
-          </Link>
-        </Button>
-      </div>
-    </section>
+    <Container
+      sectionClasses="py-16 bg-gradient-to-bl from-pink-50 to-pink-100"
+      containerClasses="flex flex-col justify-center items-center"
+    >
+      <CategoriesGrid items={items} />
+      <Button fontSize="3xl" width="2/4">
+        <Link href="/menu">
+          <a>Menú</a>
+        </Link>
+      </Button>
+    </Container>
   )
 }
