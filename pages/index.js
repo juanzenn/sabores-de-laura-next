@@ -10,7 +10,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Sabores de Laura</title>
+        <title>Sabores de Laura: Pastelería & Repostería</title>
+        <meta name="description" content="Venta de tortas, cupcakes, tartaletas y más. La mejor calidad en los Altos Mirandinos." />
+        <meta name="robots" content="noindex" />
       </Head>
 
       <main className="min-h-screen">

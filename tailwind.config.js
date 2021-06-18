@@ -21,6 +21,7 @@ module.exports = {
         'cake': 'url(/images/cake.webp)',
         'lemon-pie': 'url(/images/lemonpie.webp)',
         'pavlova': 'url(/images/pavlova.webp)',
+        'pavlova2': 'url(/images/pavlova2.webp)',
         'birthdaycake': 'url(/images/birthdaycake.svg)',
         'cookies': 'url(/images/cookies.svg)'
       })

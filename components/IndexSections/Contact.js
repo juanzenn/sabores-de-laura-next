@@ -6,29 +6,29 @@ export default function Contact() {
   return (
     <Container
       sectionClasses="p-10"
-      containerClasses="grid lg:grid-cols-3 gap-4"
+      containerClasses="grid lg:grid-cols-2 gap-4"
     >
-      <div></div>
-      <div className="flex flex-col gap-4">
-        <h4 className="font-bold text-2xl text-center text-yellow-500">
+      <div className="text-center flex flex-col items-center">
+        <h4 className="font-bold text-3xl">
           ¡Visita nuestro menú!
         </h4>
-        <Button width="full">
-          <Link href="/menu">
-            <a>Menú</a>
-          </Link>
-        </Button>
+        <Link href="/menu" passHref>
+          <Button bg='bg-pink-500 hover:bg-pink-400'>
+            Menú
+          </Button>
+        </Link>
       </div>
-      <div className="text-center">
-        <h2 className="font-bold text-3xl mb-6">
-          Envianos un WhatsApp y pide tu postre
+
+      <div className="text-center flex flex-col items-center">
+        <h2 className="font-bold text-3xl">
+          Pide tu postre
         </h2>
 
-        <Button style={{ display: "inline-block" }}>
-          <Link href="/contact">
-            <a>Contacto</a>
-          </Link>
-        </Button>
+        <Link href="/contact" passHref>
+          <Button>
+            Contacto
+          </Button>
+        </Link>
       </div>
     </Container>
   )

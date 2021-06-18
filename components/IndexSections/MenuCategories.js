@@ -47,11 +47,11 @@ export default function MenuCategories() {
       containerClasses="flex flex-col justify-center items-center"
     >
       <CategoriesGrid items={items} />
-      <Button fontSize="3xl" width="2/4">
-        <Link href="/menu">
-          <a>Menú</a>
-        </Link>
-      </Button>
+      <Link href="/menu" passHref>
+        <Button fontSize="3xl" width="2/4">
+          Menú
+        </Button>
+      </Link>
     </Container>
   )
 }
