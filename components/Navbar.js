@@ -68,7 +68,7 @@ export default function Navbar() {
         </div>
       </nav>
       <button
-        className="fixed top-2 right-6 lg:hidden z-50 focus:outline-none"
+        className="fixed top-2 right-6 lg:hidden z-40 focus:outline-none"
         onClick={() => setActive(!active)}
       >
         {active ? (

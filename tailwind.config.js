@@ -23,7 +23,21 @@ module.exports = {
         'pavlova': 'url(/images/pavlova.webp)',
         'birthdaycake': 'url(/images/birthdaycake.svg)',
         'cookies': 'url(/images/cookies.svg)'
-      })
+      }),
+      keyframes: {
+        slideIn: {
+          '0%': { left: '-110%' },
+          '100%': { left: '0' }
+        },
+        slideOut: {
+          '0%': { left: '0' },
+          '100%': { left: '-110%' }
+        }
+      },
+      animation: {
+        slideIn: 'slideIn 500ms ease-in-out forwards',
+        slideOut: 'slideOut 500ms ease-in-out forwards'
+      }
     },
   },
   variants: {
