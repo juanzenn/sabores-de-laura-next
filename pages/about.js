@@ -8,6 +8,8 @@ export default function About() {
     <>
     <Head>
       <title>Sabores de Laura - Historia</title>
+      <meta name="description" content="La historia de Sabores de Laura está llena de emprendimiento, hobbies y pasión por los dulces." />
+        <meta name="robots" content="noindex" />
     </Head>
     <main className="min-h-screen my-12 lg:my-24">
       <AboutSection

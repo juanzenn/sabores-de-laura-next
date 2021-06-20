@@ -31,6 +31,8 @@ export default function contact() {
     <>
       <Head>
         <title>Sabores de Laura - Contacto</title>
+        <meta name="description" content="Contáctanos y pide tus postres por nuestro WhatsApp." />
+        <meta name="robots" content="noindex" />
       </Head>
 
       <main className="min-h-screen my-12 lg:my-24">

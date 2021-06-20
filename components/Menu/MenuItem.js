@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+
 import ItemDisplay from './ItemDisplay'
 import Button from '../UI/Button'
 
@@ -14,10 +15,12 @@ export default function MenuItem(props) {
   const handleGoBack = () => {
     setAnimation('animate-slideOut')
     setTimeout(() => { setDisplay(false) }, 500)
+
   }
 
   return (
     <>
+
       <article className="flex flex-col gap-2 items-center">
         <header className={`h-48 w-48 bg-${props.background}`}></header>
 
@@ -42,5 +45,6 @@ export default function MenuItem(props) {
       </article>
       <ItemDisplay {...props} display={display} animation={animation} goBack={handleGoBack} />
     </>
+
   )
 }

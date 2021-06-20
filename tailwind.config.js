@@ -21,6 +21,7 @@ module.exports = {
         'cake': 'url(/images/cake.webp)',
         'lemon-pie': 'url(/images/lemonpie.webp)',
         'pavlova': 'url(/images/pavlova.webp)',
+        'pavlova2': 'url(/images/pavlova2.webp)',
         'birthdaycake': 'url(/images/birthdaycake.svg)',
         'cookies': 'url(/images/cookies.svg)'
       }),
@@ -32,12 +33,17 @@ module.exports = {
         slideOut: {
           '0%': { left: '0' },
           '100%': { left: '-110%' }
+        },
+        opacity: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' }
         }
       },
       animation: {
         slideIn: 'slideIn 500ms ease-in-out forwards',
-        slideOut: 'slideOut 500ms ease-in-out forwards'
-      }
+        slideOut: 'slideOut 500ms ease-in-out forwards',         
+        opacity: 'opacity 300ms ease-out forwards '        
+      },  
     },
   },
   variants: {
