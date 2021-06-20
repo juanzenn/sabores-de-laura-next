@@ -1,33 +1,49 @@
 import React, { useState } from 'react'
-import { InformationCircleIcon } from '@heroicons/react/solid'
+
+import ItemDisplay from './ItemDisplay'
+import Button from '../UI/Button'
 
 export default function MenuItem(props) {
-  const [tooltipOpacity, setTooltipOpacity] = useState(false)
+  const [display, setDisplay] = useState(false)
+  const [animation, setAnimation] = useState('')
 
-  const handleHover = () => {
-    setTooltipOpacity(true)
+  const handleClick = () => {
+    setAnimation('animate-slideIn')
+    setDisplay(true)
   }
 
-  const handleLeave = () => {
-    setTooltipOpacity(false)
+  const handleGoBack = () => {
+    setAnimation('animate-slideOut')
+    setTimeout(() => { setDisplay(false) }, 500)
+
   }
 
   return (
     <>
-      <div className="flex flex-col gap-2 items-center relative">
-        <div className={`h-40 w-40 lg:h-48 lg:w-48 bg-${props.background}`}></div>
 
-        <div className="flex items-center justify-between w-10/12">
+      <article className="flex flex-col gap-2 items-center">
+        <header className={`h-48 w-48 bg-${props.background}`}></header>
+
+        <section className="flex items-center justify-between w-10/12">
           <p className="text-lg font-bold">{props.title}</p>
-          <div className='flex items-center gap-1'>
-            <p className="text-base text-right text-gray-400 tracking-wide">${props.price}</p>
-            <InformationCircleIcon className='h-7 w-7 text-gray-300 cursor-pointer' onMouseEnter={handleHover} onMouseLeave={handleLeave} />
-            <div className={tooltipOpacity ? 'lg:w-full absolute bg-gray-400 text-white text-center bottom-8 left-1 p-1 rounded-md animate-opacity' : 'hidden'}>
-              <p className='md:text-sm leading-tight'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, ipsam velit debitis, possimus qui neque quibusdam enim omnis excepturi vel beatae? Eveniet.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+          <p className="text-base text-right text-gray-400 tracking-wide">
+            ${props.price}
+          </p>
+        </section>
+        <footer className="w-10/12 grid justify-end">
+          <Button
+            fontSize="sm"
+            marginY="0"
+            bg="bg-white"
+            textColor="yellow-500"
+            customClass="border border-yellow-500 hover:border-yellow-300"
+            onClick={handleClick}
+          >
+            Detalles
+          </Button>
+        </footer>
+      </article>
+      <ItemDisplay {...props} display={display} animation={animation} goBack={handleGoBack} />
     </>
 
   )

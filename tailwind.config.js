@@ -26,14 +26,24 @@ module.exports = {
         'cookies': 'url(/images/cookies.svg)'
       }),
       keyframes: {
+        slideIn: {
+          '0%': { left: '-110%' },
+          '100%': { left: '0' }
+        },
+        slideOut: {
+          '0%': { left: '0' },
+          '100%': { left: '-110%' }
+        },
         opacity: {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' }
         }
       },
       animation: {
-        opacity: 'opacity 300ms ease-out forwards '
-      }
+        slideIn: 'slideIn 500ms ease-in-out forwards',
+        slideOut: 'slideOut 500ms ease-in-out forwards',         
+        opacity: 'opacity 300ms ease-out forwards '        
+      },  
     },
   },
   variants: {

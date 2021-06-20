@@ -1,13 +1,13 @@
-import React, {useState, useEffect} from "react"
-import Head from "next/head"
-import MenuNavigation from "../components/Menu/MenuNavigation"
-import MenuItem from "../components/Menu/MenuItem"
+import React, { useState, useEffect } from 'react'
+import Head from 'next/head'
+import MenuNavigation from '../components/Menu/MenuNavigation'
+import MenuItem from '../components/Menu/MenuItem'
 
 export default function Menu() {
   const [category, setCategory] = useState('all')
-  const [filteredItems, setFilteredItems] = useState([])  
+  const [filteredItems, setFilteredItems] = useState([])
 
-  const handleClick = (param, event) => {    
+  const handleClick = (param, event) => {
     setCategory(param)
   }
 
@@ -17,78 +17,111 @@ export default function Menu() {
         title: 'Cupcake 1',
         price: '15',
         color: 'yellow-400',
-        category: 'cupcake'
+        'description':
+          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni tenetur quia vero facilis perferendis, omnis sed soluta possimus distinctio vitae architecto tempore praesentium ea? Impedit soluta, ipsum suscipit eligendi assumenda ipsa laboriosam obcaecati eum repudiandae vitae? Aut sapiente voluptas doloribus ipsam veniam beatae tempora, autem ipsum esse incidunt inventore laboriosam eum nisi laudantium, veritatis alias!',
+        category: 'cupcake',
       },
       {
         title: 'Cupcake 2',
         price: '15',
         color: 'yellow-400',
-        category: 'cupcake'
+        'description':
+          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni tenetur quia vero facilis perferendis, omnis sed soluta possimus distinctio vitae architecto tempore praesentium ea? Impedit soluta, ipsum suscipit eligendi assumenda ipsa laboriosam obcaecati eum repudiandae vitae? Aut sapiente voluptas doloribus ipsam veniam beatae tempora, autem ipsum esse incidunt inventore laboriosam eum nisi laudantium, veritatis alias!',
+
+        category: 'cupcake',
       },
       {
         title: 'Cupcake 3',
         price: '15',
         color: 'yellow-400',
-        category: 'cupcake'
+        'description':
+          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni tenetur quia vero facilis perferendis, omnis sed soluta possimus distinctio vitae architecto tempore praesentium ea? Impedit soluta, ipsum suscipit eligendi assumenda ipsa laboriosam obcaecati eum repudiandae vitae? Aut sapiente voluptas doloribus ipsam veniam beatae tempora, autem ipsum esse incidunt inventore laboriosam eum nisi laudantium, veritatis alias!',
+
+        category: 'cupcake',
       },
       {
         title: 'Torta 1',
         price: '40',
         color: 'yellow-500',
-        category: 'cake'
+        'description':
+          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni tenetur quia vero facilis perferendis, omnis sed soluta possimus distinctio vitae architecto tempore praesentium ea? Impedit soluta, ipsum suscipit eligendi assumenda ipsa laboriosam obcaecati eum repudiandae vitae? Aut sapiente voluptas doloribus ipsam veniam beatae tempora, autem ipsum esse incidunt inventore laboriosam eum nisi laudantium, veritatis alias!',
+
+        category: 'cake',
       },
       {
         title: 'Torta 2',
         price: '40',
         color: 'yellow-500',
-        category: 'cake'
+        'description':
+          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni tenetur quia vero facilis perferendis, omnis sed soluta possimus distinctio vitae architecto tempore praesentium ea? Impedit soluta, ipsum suscipit eligendi assumenda ipsa laboriosam obcaecati eum repudiandae vitae? Aut sapiente voluptas doloribus ipsam veniam beatae tempora, autem ipsum esse incidunt inventore laboriosam eum nisi laudantium, veritatis alias!',
+
+        category: 'cake',
       },
       {
         title: 'Torta 3',
         price: '40',
         color: 'yellow-500',
-        category: 'cake'
+        'description':
+          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni tenetur quia vero facilis perferendis, omnis sed soluta possimus distinctio vitae architecto tempore praesentium ea? Impedit soluta, ipsum suscipit eligendi assumenda ipsa laboriosam obcaecati eum repudiandae vitae? Aut sapiente voluptas doloribus ipsam veniam beatae tempora, autem ipsum esse incidunt inventore laboriosam eum nisi laudantium, veritatis alias!',
+
+        category: 'cake',
       },
       {
         title: 'Pie 1',
         price: '35',
         color: 'yellow-600',
-        category: 'pie'
+        'description':
+          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni tenetur quia vero facilis perferendis, omnis sed soluta possimus distinctio vitae architecto tempore praesentium ea? Impedit soluta, ipsum suscipit eligendi assumenda ipsa laboriosam obcaecati eum repudiandae vitae? Aut sapiente voluptas doloribus ipsam veniam beatae tempora, autem ipsum esse incidunt inventore laboriosam eum nisi laudantium, veritatis alias!',
+
+        category: 'pie',
       },
       {
         title: 'Pie 2',
         price: '35',
         color: 'yellow-600',
-        category: 'pie'
+        'description':
+          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni tenetur quia vero facilis perferendis, omnis sed soluta possimus distinctio vitae architecto tempore praesentium ea? Impedit soluta, ipsum suscipit eligendi assumenda ipsa laboriosam obcaecati eum repudiandae vitae? Aut sapiente voluptas doloribus ipsam veniam beatae tempora, autem ipsum esse incidunt inventore laboriosam eum nisi laudantium, veritatis alias!',
+
+        category: 'pie',
       },
       {
         title: 'Pie 3',
         price: '35',
         color: 'yellow-600',
-        category: 'pie'
+        'description':
+          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni tenetur quia vero facilis perferendis, omnis sed soluta possimus distinctio vitae architecto tempore praesentium ea? Impedit soluta, ipsum suscipit eligendi assumenda ipsa laboriosam obcaecati eum repudiandae vitae? Aut sapiente voluptas doloribus ipsam veniam beatae tempora, autem ipsum esse incidunt inventore laboriosam eum nisi laudantium, veritatis alias!',
+
+        category: 'pie',
       },
       {
         title: 'Galleta 1',
         price: '5',
         color: 'yellow-700',
-        category: 'cookie'
+        'description':
+          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni tenetur quia vero facilis perferendis, omnis sed soluta possimus distinctio vitae architecto tempore praesentium ea? Impedit soluta, ipsum suscipit eligendi assumenda ipsa laboriosam obcaecati eum repudiandae vitae? Aut sapiente voluptas doloribus ipsam veniam beatae tempora, autem ipsum esse incidunt inventore laboriosam eum nisi laudantium, veritatis alias!',
+
+        category: 'cookie',
       },
       {
         title: 'Galleta 2',
         price: '5',
         color: 'yellow-700',
-        category: 'cookie'
+        'description':
+          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni tenetur quia vero facilis perferendis, omnis sed soluta possimus distinctio vitae architecto tempore praesentium ea? Impedit soluta, ipsum suscipit eligendi assumenda ipsa laboriosam obcaecati eum repudiandae vitae? Aut sapiente voluptas doloribus ipsam veniam beatae tempora, autem ipsum esse incidunt inventore laboriosam eum nisi laudantium, veritatis alias!',
+
+        category: 'cookie',
       },
       {
         title: 'Galleta 3',
         price: '5',
         color: 'yellow-700',
-        category: 'cookie'
+        'description':
+          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni tenetur quia vero facilis perferendis, omnis sed soluta possimus distinctio vitae architecto tempore praesentium ea? Impedit soluta, ipsum suscipit eligendi assumenda ipsa laboriosam obcaecati eum repudiandae vitae? Aut sapiente voluptas doloribus ipsam veniam beatae tempora, autem ipsum esse incidunt inventore laboriosam eum nisi laudantium, veritatis alias!',
+
+        category: 'cookie',
       },
-  
-      
     ]
-    if (category === 'all') {     
+    if (category === 'all') {
       setFilteredItems(MenuItems)
     } else {
       function filterArray(item) {
@@ -99,7 +132,7 @@ export default function Menu() {
       }
       const filteredArray = MenuItems.filter(filterArray)
       setFilteredItems(filteredArray)
-    }    
+    }
   }, [category])
 
   return (
@@ -117,7 +150,13 @@ export default function Menu() {
           {/* Filter the array with "category"
               Map the array after */}
           {filteredItems.map((item, index) => (
-            <MenuItem key={index} background={item.color} title={item.title} price={item.price} />
+            <MenuItem
+              key={index}
+              background={item.color}
+              title={item.title}
+              price={item.price}
+              description={item.description}
+            />
           ))}
         </div>
       </main>
