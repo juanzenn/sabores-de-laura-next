@@ -12,7 +12,7 @@ const NavItem = (props) => {
   )
 }
 
-export default function MenuNavigation({ selectCategory }) {
+export default function MenuNavigation({ selectCategory, tags }) {
   const items = [
     {
       title: "Todos",
@@ -39,12 +39,13 @@ export default function MenuNavigation({ selectCategory }) {
   return (
     <div className="bg-yellow-500 mb-4 flex items-center pl-2 lg:pl-12 overflow-scroll lg:overflow-hidden">
       <ul className="flex gap-2">
-        {items.map((item, index) => (
+      <NavItem customEvent={(e) => selectCategory('all', e)}> Todos </NavItem>
+        {tags.map(tag => (
           <NavItem
-            key={index}
-            customEvent={(e) => selectCategory(item.category, e)}
+            key={tag.sys.id}
+            customEvent={(e) => selectCategory(tag.sys.id, e)}
           >
-            {item.title}
+            {tag.name}
           </NavItem>
         ))}
       </ul>

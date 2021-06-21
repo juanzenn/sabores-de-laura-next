@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react'
 import Head from 'next/head'
 import MenuNavigation from '../components/Menu/MenuNavigation'
 import MenuItem from '../components/Menu/MenuItem'
+import { fetchProducts, fetchTags } from '../contentful.js'
 
-export default function Menu() {
+export default function Menu(props) {
   const [category, setCategory] = useState('all')
   const [filteredItems, setFilteredItems] = useState([])
 
@@ -12,120 +13,12 @@ export default function Menu() {
   }
 
   useEffect(() => {
-    const MenuItems = [
-      {
-        title: 'Cupcake 1',
-        price: '15',
-        color: 'yellow-400',
-        'description':
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni tenetur quia vero facilis perferendis, omnis sed soluta possimus distinctio vitae architecto tempore praesentium ea? Impedit soluta, ipsum suscipit eligendi assumenda ipsa laboriosam obcaecati eum repudiandae vitae? Aut sapiente voluptas doloribus ipsam veniam beatae tempora, autem ipsum esse incidunt inventore laboriosam eum nisi laudantium, veritatis alias!',
-        category: 'cupcake',
-      },
-      {
-        title: 'Cupcake 2',
-        price: '15',
-        color: 'yellow-400',
-        'description':
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni tenetur quia vero facilis perferendis, omnis sed soluta possimus distinctio vitae architecto tempore praesentium ea? Impedit soluta, ipsum suscipit eligendi assumenda ipsa laboriosam obcaecati eum repudiandae vitae? Aut sapiente voluptas doloribus ipsam veniam beatae tempora, autem ipsum esse incidunt inventore laboriosam eum nisi laudantium, veritatis alias!',
-
-        category: 'cupcake',
-      },
-      {
-        title: 'Cupcake 3',
-        price: '15',
-        color: 'yellow-400',
-        'description':
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni tenetur quia vero facilis perferendis, omnis sed soluta possimus distinctio vitae architecto tempore praesentium ea? Impedit soluta, ipsum suscipit eligendi assumenda ipsa laboriosam obcaecati eum repudiandae vitae? Aut sapiente voluptas doloribus ipsam veniam beatae tempora, autem ipsum esse incidunt inventore laboriosam eum nisi laudantium, veritatis alias!',
-
-        category: 'cupcake',
-      },
-      {
-        title: 'Torta 1',
-        price: '40',
-        color: 'yellow-500',
-        'description':
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni tenetur quia vero facilis perferendis, omnis sed soluta possimus distinctio vitae architecto tempore praesentium ea? Impedit soluta, ipsum suscipit eligendi assumenda ipsa laboriosam obcaecati eum repudiandae vitae? Aut sapiente voluptas doloribus ipsam veniam beatae tempora, autem ipsum esse incidunt inventore laboriosam eum nisi laudantium, veritatis alias!',
-
-        category: 'cake',
-      },
-      {
-        title: 'Torta 2',
-        price: '40',
-        color: 'yellow-500',
-        'description':
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni tenetur quia vero facilis perferendis, omnis sed soluta possimus distinctio vitae architecto tempore praesentium ea? Impedit soluta, ipsum suscipit eligendi assumenda ipsa laboriosam obcaecati eum repudiandae vitae? Aut sapiente voluptas doloribus ipsam veniam beatae tempora, autem ipsum esse incidunt inventore laboriosam eum nisi laudantium, veritatis alias!',
-
-        category: 'cake',
-      },
-      {
-        title: 'Torta 3',
-        price: '40',
-        color: 'yellow-500',
-        'description':
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni tenetur quia vero facilis perferendis, omnis sed soluta possimus distinctio vitae architecto tempore praesentium ea? Impedit soluta, ipsum suscipit eligendi assumenda ipsa laboriosam obcaecati eum repudiandae vitae? Aut sapiente voluptas doloribus ipsam veniam beatae tempora, autem ipsum esse incidunt inventore laboriosam eum nisi laudantium, veritatis alias!',
-
-        category: 'cake',
-      },
-      {
-        title: 'Pie 1',
-        price: '35',
-        color: 'yellow-600',
-        'description':
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni tenetur quia vero facilis perferendis, omnis sed soluta possimus distinctio vitae architecto tempore praesentium ea? Impedit soluta, ipsum suscipit eligendi assumenda ipsa laboriosam obcaecati eum repudiandae vitae? Aut sapiente voluptas doloribus ipsam veniam beatae tempora, autem ipsum esse incidunt inventore laboriosam eum nisi laudantium, veritatis alias!',
-
-        category: 'pie',
-      },
-      {
-        title: 'Pie 2',
-        price: '35',
-        color: 'yellow-600',
-        'description':
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni tenetur quia vero facilis perferendis, omnis sed soluta possimus distinctio vitae architecto tempore praesentium ea? Impedit soluta, ipsum suscipit eligendi assumenda ipsa laboriosam obcaecati eum repudiandae vitae? Aut sapiente voluptas doloribus ipsam veniam beatae tempora, autem ipsum esse incidunt inventore laboriosam eum nisi laudantium, veritatis alias!',
-
-        category: 'pie',
-      },
-      {
-        title: 'Pie 3',
-        price: '35',
-        color: 'yellow-600',
-        'description':
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni tenetur quia vero facilis perferendis, omnis sed soluta possimus distinctio vitae architecto tempore praesentium ea? Impedit soluta, ipsum suscipit eligendi assumenda ipsa laboriosam obcaecati eum repudiandae vitae? Aut sapiente voluptas doloribus ipsam veniam beatae tempora, autem ipsum esse incidunt inventore laboriosam eum nisi laudantium, veritatis alias!',
-
-        category: 'pie',
-      },
-      {
-        title: 'Galleta 1',
-        price: '5',
-        color: 'yellow-700',
-        'description':
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni tenetur quia vero facilis perferendis, omnis sed soluta possimus distinctio vitae architecto tempore praesentium ea? Impedit soluta, ipsum suscipit eligendi assumenda ipsa laboriosam obcaecati eum repudiandae vitae? Aut sapiente voluptas doloribus ipsam veniam beatae tempora, autem ipsum esse incidunt inventore laboriosam eum nisi laudantium, veritatis alias!',
-
-        category: 'cookie',
-      },
-      {
-        title: 'Galleta 2',
-        price: '5',
-        color: 'yellow-700',
-        'description':
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni tenetur quia vero facilis perferendis, omnis sed soluta possimus distinctio vitae architecto tempore praesentium ea? Impedit soluta, ipsum suscipit eligendi assumenda ipsa laboriosam obcaecati eum repudiandae vitae? Aut sapiente voluptas doloribus ipsam veniam beatae tempora, autem ipsum esse incidunt inventore laboriosam eum nisi laudantium, veritatis alias!',
-
-        category: 'cookie',
-      },
-      {
-        title: 'Galleta 3',
-        price: '5',
-        color: 'yellow-700',
-        'description':
-          'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magni tenetur quia vero facilis perferendis, omnis sed soluta possimus distinctio vitae architecto tempore praesentium ea? Impedit soluta, ipsum suscipit eligendi assumenda ipsa laboriosam obcaecati eum repudiandae vitae? Aut sapiente voluptas doloribus ipsam veniam beatae tempora, autem ipsum esse incidunt inventore laboriosam eum nisi laudantium, veritatis alias!',
-
-        category: 'cookie',
-      },
-    ]
+    const MenuItems = props.products
     if (category === 'all') {
       setFilteredItems(MenuItems)
     } else {
       function filterArray(item) {
-        if (item.category === category) {
+        if (item.metadata.tags[0].sys.id === category) {
           return true
         }
         return false
@@ -133,7 +26,7 @@ export default function Menu() {
       const filteredArray = MenuItems.filter(filterArray)
       setFilteredItems(filteredArray)
     }
-  }, [category])
+  }, [category, props.products])
 
   return (
     <>
@@ -143,23 +36,39 @@ export default function Menu() {
         <meta name="robots" content="noindex" />
       </Head>
       <main className="min-h-screen my-12 lg:my-24">
-        <h2 className='font-bold text-6xl text-center'>Menu</h2>        
-        <p className='text-gray-500 mb-4 text-sm text-center'>Todos nuestros postres en un solo lugar.</p>
-        <MenuNavigation selectCategory={handleClick} />        
-        <div className="container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 md:gap-4 my-6">
+
+        <h2 className="font-bold text-6xl text-center">Menu</h2>
+        <p className="text-gray-500 mb-4 text-sm text-center">
+          Todos nuestros postres, con precios actualizados.
+        </p>
+        <MenuNavigation tags={props.tags} selectCategory={handleClick} />
+        <div className="container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-8 md:gap-6 my-6">
+
           {/* Filter the array with "category"
               Map the array after */}
-          {filteredItems.map((item, index) => (
+          {filteredItems.map(product => (
             <MenuItem
-              key={index}
-              background={item.color}
-              title={item.title}
-              price={item.price}
-              description={item.description}
+              key={product.sys.id}
+              background={'bg-red-500'}
+              title={product.fields.title}
+              price={product.fields.price}
+              description={product.fields.description}
             />
           ))}
         </div>
       </main>
     </>
   )
+}
+
+export async function getStaticProps(context) {
+  const tags = await fetchTags()
+  const products = await fetchProducts()
+
+  return {
+    props: {
+      tags,
+      products,
+    },
+  }
 }
