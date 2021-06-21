@@ -32,14 +32,18 @@ export default function Menu(props) {
     <>
       <Head>
         <title>Sabores de Laura - Menú</title>
+        <meta name="description" content="Todos nuestros productos en un solo sitio. Tenemos variedad de cupcakes, tortas, pie de limon, cheesecake, galletas y más." />
+        <meta name="robots" content="noindex" />
       </Head>
       <main className="min-h-screen my-12 lg:my-24">
+
         <h2 className="font-bold text-6xl text-center">Menu</h2>
         <p className="text-gray-500 mb-4 text-sm text-center">
           Todos nuestros postres, con precios actualizados.
         </p>
         <MenuNavigation tags={props.tags} selectCategory={handleClick} />
         <div className="container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-8 md:gap-6 my-6">
+
           {/* Filter the array with "category"
               Map the array after */}
           {filteredItems.map(product => (
