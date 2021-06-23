@@ -5,7 +5,7 @@ import FlexContainer from '../UI/FlexContainer'
 const TestimonyCard = ({ content }) => {
   return (
     <FlexContainer
-      classes={`w-3/4 lg:w-full flex-col p-4 rounded-md items-center shadow-sm border border-pink-100`}
+      classes={`w-3/4 h-max-content lg:w-full flex-col p-4 rounded-md items-center shadow-sm border border-pink-100`}
     >
       <div className="w-32 h-32">
         <div className="w-full h-full rounded-full bg-yellow-500 transform -translate-y-12"></div>
@@ -31,7 +31,7 @@ export default function Testimony() {
           Nos prefieren por nuestra atención y calidad
         </p>
       </div>
-      <section className="grid lg:grid-cols-3 gap-12 justify-items-center">
+      <section className="grid lg:grid-cols-3 gap-12 justify-items-center items-center">
         <TestimonyCard
           content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tempora
           accusantium corporis necessitatibus cumque debitis, obcaecati quasi

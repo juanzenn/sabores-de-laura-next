@@ -1,24 +1,24 @@
-import {ButtonPrimary} from "../UI/Button"
-import Link from "next/link"
-import Container from "../UI/Container"
+import { ButtonPrimary } from '../UI/Button'
+import Link from 'next/link'
+import Container from '../UI/Container'
 
 export default function MenuCategories() {
   const items = [
     {
-      title: "Tortas",
-      bg: "bg-cake bg-cover bg-center bg-no-repeat",
+      title: 'Tortas',
+      bg: 'bg-cake bg-cover bg-center bg-no-repeat',
     },
     {
-      title: "Tartaletas",
-      bg: "bg-lemon-pie bg-cover bg-bottom bg-no-repeat",
+      title: 'Tartaletas',
+      bg: 'bg-lemon-pie bg-cover bg-bottom bg-no-repeat',
     },
     {
-      title: "Cupcakes",
-      bg: "bg-cupcakes bg-cover bg-center bg-no-repeat",
+      title: 'Cupcakes',
+      bg: 'bg-cupcakes bg-cover bg-center bg-no-repeat',
     },
     {
-      title: "Y mucho más...",
-      bg: "bg-pavlova bg-cover bg-center bg-no-repeat",
+      title: 'Y mucho más...',
+      bg: 'bg-pavlova bg-cover bg-center bg-no-repeat',
     },
   ]
 
@@ -47,11 +47,11 @@ export default function MenuCategories() {
       containerClasses="flex flex-col justify-center items-center"
     >
       <CategoriesGrid items={items} />
-      <Link href="/menu" passHref>
-        <ButtonPrimary spacing='my-6 w-2/4'>
-          Menú
-        </ButtonPrimary>
-      </Link>
+      <ButtonPrimary spacing="my-6 w-2/4">
+        <Link href="/menu">
+          <a className='w-full h-full'>Menú</a>
+        </Link>
+      </ButtonPrimary>
     </Container>
   )
 }

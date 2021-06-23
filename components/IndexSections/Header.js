@@ -1,8 +1,8 @@
-import {ButtonPrimary, ButtonSecondary} from "../UI/Button"
-import Container from "../UI/Container"
-import Link from "next/link"
-import FlexContainer from "../UI/FlexContainer"
-import {Grid, Phone} from 'akar-icons'
+import { ButtonPrimary, ButtonSecondary } from '../UI/Button'
+import Container from '../UI/Container'
+import Link from 'next/link'
+import FlexContainer from '../UI/FlexContainer'
+import { Grid, Phone } from 'akar-icons'
 
 export default function Header() {
   return (
@@ -21,22 +21,24 @@ export default function Header() {
         <h2 className="text-lg lg:text-2xl text-pink-200">
           Nuestros postres van directo al corazón
         </h2>
-        <FlexContainer>
-
-        </FlexContainer>
-        <FlexContainer classes='gap-2 justify-center'>
-          <Link href="/menu" passHref>
-            <ButtonPrimary spacing='my-4'>
-              Menú
-              <Grid size={20} />
-            </ButtonPrimary>
-          </Link>
-          <Link href="/contact" passHref>
-            <ButtonSecondary spacing='my-4'>
-              Contacto
-              <Phone size={20} />
-            </ButtonSecondary>
-          </Link>
+        <FlexContainer></FlexContainer>
+        <FlexContainer classes="gap-2 justify-center">
+          <ButtonPrimary spacing="my-4">
+            <Link href="/menu">
+              <a className='w-full h-full flex flex-row items-center gap-1'>
+                Menú
+                <Grid size={20} />
+              </a>
+            </Link>
+          </ButtonPrimary>
+          <ButtonSecondary spacing="my-4">
+            <Link href="/contact">
+              <a className='w-full h-full flex flex-row items-center gap-1'>
+                Contacto
+                <Phone size={20} />
+              </a>
+            </Link>
+          </ButtonSecondary>
         </FlexContainer>
       </div>
     </Container>
