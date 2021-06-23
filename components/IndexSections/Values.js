@@ -2,11 +2,11 @@ import Container from "../UI/Container"
 
 const GridItem = props => {
   return (
-    <div className="p-1 text-center">
-      <h4 className="font-bold text-2xl text-yellow-500">
+    <div className="text-center">
+      <h4 className="font-bold text-xl text-pink-400">
         {props.title}
       </h4>
-      <p className="text-lg text-gray-600">
+      <p className="text-base text-gray-500">
         {props.description}
       </p>
     </div>
@@ -42,13 +42,13 @@ export default function Values() {
         <h2 className="text-3xl lg:text-4xl font-bold mb-2 text-yellow-500">
           Somos más que postres
         </h2>
-        <p className="lg:max-w-3xl mb-4 text-gray-500">
+        <p className="lg:max-w-3xl mb-4 text-gray-600">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto
           sapiente debitis harum illo facilis recusandae quas reiciendis
           incidunt. Blanditiis eius optio unde sint porro maiores iusto
           pariatur, molestiae possimus adipisci.
         </p>
-        <div className="grid lg:grid-cols-2 gap-4">
+        <div className="grid lg:grid-cols-2 gap-6">
          {items.map((item, index) => {
            return <GridItem key={index} title={item.title} description={item.description} />
          })}

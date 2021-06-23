@@ -1,19 +1,42 @@
 export default function Button({
   children,
-  customClass = '',
-  fontSize = 'lg',
-  width = 'max',
-  bg = 'bg-yellow-500',
-  marginY = '4',
-  textColor = 'gray-50',
+  customClass = ``,  
   ...rest
 }) {
   return (
     <button
-      className={`w-${width} ${bg} text-${textColor} my-${marginY} py-2 px-6 text-${fontSize} rounded-md shadow-lg hover:bg-yellow-300 hover:text-gray-900 transform hover:-translate-y-1 transition-all duration-300 flex justify-center gap-2 ${customClass}`}
+      className={`py-2 px-6 rounded-full shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex justify-center items-center gap-1 ${customClass}`}
       {...rest}
     >
       {children}
     </button>
   )
 }
+
+function ButtonPrimary({ children, spacing }) {
+  return (
+    <Button
+      customClass={`text-lg bg-yellow-500 hover:bg-yellow-300 ${spacing}`}
+    >
+      {children}
+    </Button>
+  )
+}
+
+function ButtonSecondary({ children, spacing }) {
+  return (
+    <Button customClass={`text-lg bg-pink-500 hover:bg-pink-300 ${spacing}`}>
+      {children}
+    </Button>
+  )
+}
+
+function MenuButton({ children, spacing, ...rest }) {
+  return (
+    <Button customClass={`text-base text-yellow-500 bg-transparent border border-yellow-500 hover:text-white hover:bg-yellow-500 ${spacing}`} {...rest}>
+      {children}
+    </Button>
+  )
+}
+
+export { ButtonPrimary, ButtonSecondary, MenuButton }

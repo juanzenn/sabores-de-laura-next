@@ -40,7 +40,7 @@ export default function ItemDisplay(props) {
             <footer className="mt-4 flex items-center">
               {/* <span className='font-bold text-lg text-yellow-600'></span> */}
               <Link href="/contact" passHref>
-                <Button onClick={props.goBack} marginY="2" fontSize="xl">
+                <Button onClick={props.goBack} marginY="my-2" fontSize="xl">
                   Contacto
                 </Button>
               </Link>

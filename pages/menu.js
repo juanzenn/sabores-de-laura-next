@@ -42,14 +42,14 @@ export default function Menu(props) {
           Todos nuestros postres, con precios actualizados.
         </p>
         <MenuNavigation tags={props.tags} selectCategory={handleClick} />
-        <div className="container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-8 md:gap-6 my-6">
+        <div className="container mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-y-8 gap-x-2 md:gap-6 my-6 px-1 lg:px-4">
 
           {/* Filter the array with "category"
               Map the array after */}
           {filteredItems.map(product => (
             <MenuItem
               key={product.sys.id}
-              background={'bg-red-500'}
+              background={'red-500'}
               title={product.fields.title}
               price={product.fields.price}
               description={product.fields.description}
