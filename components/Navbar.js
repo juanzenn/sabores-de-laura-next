@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react"
-import Link from "next/link"
-import { MenuAlt3Icon, XCircleIcon } from "@heroicons/react/outline"
+import React, { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { TextAlignJustified, Cross } from 'akar-icons'
 
-const NavbarItem = (props) => {
+const NavbarItem = props => {
   return (
     <Link href={props.href}>
       <a
@@ -16,7 +16,8 @@ const NavbarItem = (props) => {
 }
 
 export default function Navbar() {
-  const [active, setActive] = useState("")
+  const [active, setActive] = useState('')
+  const [animation, setAnimation] = useState('animate-slideIn')
 
   useEffect(() => {
     window.innerWidth < 768 ? setActive(false) : setActive(true)
@@ -24,36 +25,45 @@ export default function Navbar() {
 
   const items = [
     {
-      title: "Página principal",
-      href: "/",
+      title: 'Página principal',
+      href: '/',
     },
     {
-      title: "Menú",
-      href: "/menu",
+      title: 'Menú',
+      href: '/menu',
     },
     {
-      title: "Nosotros",
-      href: "/about",
+      title: 'Nosotros',
+      href: '/about',
     },
     {
-      title: "Contacto",
-      href: "/contact",
+      title: 'Contacto',
+      href: '/contact',
     },
   ]
 
-  const isActive = active ? "" : "hidden"
+  const isActive = active ? '' : 'hidden'
 
   const handleClick = () => {
     if (window.innerWidth < 768) {
-      setActive(false)
+      setAnimation('animate-slideOut')
+      setTimeout(() => {
+        setActive(false)
+      }, 500)
     }
   }
 
   return (
     <>
       <nav className={`w-screen bg-gray-50 fixed top-0 shadow z-40`}>
-        <div className={ active ? `w-11/12 lg:w-10/12 mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-center gap-4 py-6 lg:py-2` : 'hidden'}>
-          <div className="ml-2 lg:m-0  h-12 w-12 inline-block bg-logo bg-cover bg-center bg-no-repeat rounded-full"></div>
+        <div
+          className={
+            active
+              ? `absolute lg:relative bg-gray-50 w-full lg:w-10/12 mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-center gap-4 py-6 lg:py-2 pl-6 lg:pl-0 ${animation}`
+              : 'hidden'
+          }
+        >
+          <div className="ml-4 lg:m-0  h-12 w-12 inline-block bg-logo bg-cover bg-center bg-no-repeat rounded-full"></div>
 
           <div className="flex flex-col lg:flex-row w-full justify-center">
             {items.map((item, index) => (
@@ -68,13 +78,22 @@ export default function Navbar() {
         </div>
       </nav>
       <button
-        className="fixed top-2 right-6 lg:hidden z-40 focus:outline-none"
-        onClick={() => setActive(!active)}
+        className="fixed top-4 right-6 lg:hidden z-40 focus:outline-none"
+        onClick={() => {
+          setAnimation(active ? 'animate-slideOut' : 'animate-slideIn')
+          setTimeout(() => {
+            setActive(!active)
+          }, 500)
+        }}
       >
         {active ? (
-          <XCircleIcon className="h-8 w-8 text-yellow-400" />
+          <Cross size={30} className="text-pink-500" strokeWidth={3} />
         ) : (
-          <MenuAlt3Icon className="h-8 w-8 text-black" />
+          <TextAlignJustified
+            size={36}
+            className="text-pink-500"
+            strokeWidth={3}
+          />
         )}
       </button>
     </>

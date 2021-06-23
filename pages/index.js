@@ -5,6 +5,7 @@ import MenuCategories from '../components/IndexSections/MenuCategories'
 import Values from '../components/IndexSections/Values'
 import Contact from '../components/IndexSections/Contact'
 import Testimony from '../components/IndexSections/Testimony'
+import AdBanner from '../components/AdBanner'
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
         <meta name="robots" content="noindex" />
       </Head>
 
-      <main className="min-h-screen">
+      <main className="min-h-screen">        
         <Header />        
         <MenuCategories />
         <Values />

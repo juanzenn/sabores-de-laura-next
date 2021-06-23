@@ -21,9 +21,7 @@ module.exports = {
         'cake': 'url(/images/cake.webp)',
         'lemon-pie': 'url(/images/lemonpie.webp)',
         'pavlova': 'url(/images/pavlova.webp)',
-        'pavlova2': 'url(/images/pavlova2.webp)',
-        'birthdaycake': 'url(/images/birthdaycake.svg)',
-        'cookies': 'url(/images/cookies.svg)'
+        'pavlova2': 'url(/images/pavlova2.webp)',        
       }),
       keyframes: {
         slideIn: {
@@ -43,11 +41,17 @@ module.exports = {
         slideIn: 'slideIn 500ms ease-in-out forwards',
         slideOut: 'slideOut 500ms ease-in-out forwards',         
         opacity: 'opacity 300ms ease-out forwards '        
-      },  
+      },
+      height: {
+        'max-content': 'max-content'
+      }
+        
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      brightness: ['hover'],
+    },
   },
   plugins: [],
 }
