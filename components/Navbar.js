@@ -7,7 +7,7 @@ const NavbarItem = (props) => {
     <Link href={props.href}>
       <a
         onClick={props.customOnClick}
-        className="w-max text-gray-900 tracking-wider text-lg lg:text-base px-4 py-2 hover:bg-yellow-300 rounded-sm transtion-all duration-300"
+        className="w-max text-gray-900 tracking-wider text-lg lg:text-base px-4 py-2 hover:bg-yellow-200 rounded-full transtion-all duration-300"
       >
         {props.title}
       </a>

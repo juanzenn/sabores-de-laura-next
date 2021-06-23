@@ -1,7 +1,8 @@
-import Button from "../UI/Button"
+import {ButtonPrimary, ButtonSecondary} from "../UI/Button"
 import Container from "../UI/Container"
 import Link from "next/link"
 import FlexContainer from "../UI/FlexContainer"
+import {Grid, Phone} from 'akar-icons'
 
 export default function Header() {
   return (
@@ -14,7 +15,7 @@ export default function Header() {
       </div>
 
       <div className="w-full lg:flex-grow text-center">
-        <p className="text-3xl lg:text-6xl font-bold text-yellow-300 mt-2 mb-1 lg:mt-0 lg:mb-2 tracking-tight">
+        <p className="text-3xl lg:text-6xl font-bold text-yellow-300 mt-2 mb-1 lg:mt-0 tracking-tight">
           Pastelería & Repostería
         </p>
         <h2 className="text-lg lg:text-2xl text-pink-200">
@@ -25,14 +26,16 @@ export default function Header() {
         </FlexContainer>
         <FlexContainer classes='gap-2 justify-center'>
           <Link href="/menu" passHref>
-            <Button fontSize="xl" bg="bg-yellow-500">
+            <ButtonPrimary spacing='my-4'>
               Menú
-            </Button>
+              <Grid size={20} />
+            </ButtonPrimary>
           </Link>
-          <Link href="/contact">
-            <Button fontSize="xl" bg="bg-pink-500 hover:bg-pink-200">
+          <Link href="/contact" passHref>
+            <ButtonSecondary spacing='my-4'>
               Contacto
-            </Button>
+              <Phone size={20} />
+            </ButtonSecondary>
           </Link>
         </FlexContainer>
       </div>

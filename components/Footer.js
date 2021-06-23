@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const FooterLink = (props) => {
   return (
-    <Link href={props.href}>
+    <Link href={props.href} passHref>
       <a className="hover:text-yellow-400 transition-all duration-300">
         {props.title}
       </a>
@@ -42,14 +42,14 @@ export default function Footer() {
   const footerInfo = [
     {
       title: "Ubicación",
-      info: "Venezuela, estado Miranda, San Antonio de los Altos",
+      info: "Venezuela, Miranda, San Antonio de los Altos",
     },
     {
       title: "Teléfono",
-      info: "+58 414-123-4567",
+      info: "+58 414 200-7823",
     },
     {
-      title: "Horarios",
+      title: "Horario de atención",
       info: "8:00am - 6:00pm",
     },
   ]
@@ -78,7 +78,7 @@ export default function Footer() {
           <p className="text-xs text-gray-500">Sabores de Laura - Todos los derechos reservados</p>
         </div>
       </div>
-      <p className="text-center text-sm text-gray-500 mt-12">Diseñado y programado con <strong className='text-blue-400'>♥</strong> en <a href="" className="hover:text-blue-400 transition-all duration-300">ZEN Websites</a></p>
+      <p className="text-center text-sm text-gray-500 mt-12">Diseñado y programado con <strong className='text-blue-400'>♥</strong> por <a href="https://juanzenn.github.io/blobsfolio/" className="hover:text-blue-400 transition-all duration-300">Juan Alvarez</a></p>
     </footer>
   )
 }

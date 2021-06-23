@@ -1,4 +1,4 @@
-import Button from "../UI/Button"
+import {ButtonPrimary} from "../UI/Button"
 import Link from "next/link"
 import Container from "../UI/Container"
 
@@ -48,9 +48,9 @@ export default function MenuCategories() {
     >
       <CategoriesGrid items={items} />
       <Link href="/menu" passHref>
-        <Button fontSize="3xl" width="2/4">
+        <ButtonPrimary spacing='my-6 w-2/4'>
           Menú
-        </Button>
+        </ButtonPrimary>
       </Link>
     </Container>
   )

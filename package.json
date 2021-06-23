@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^1.0.1",
+    "akar-icons": "^1.5.3",
     "autoprefixer": "^10.2.6",
     "contentful": "^8.4.2",
     "next": "11.0.0",
