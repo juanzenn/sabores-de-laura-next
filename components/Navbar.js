@@ -1,27 +1,26 @@
-import React, { useState, useEffect } from 'react'
-import Link from 'next/link'
-import { TextAlignJustified, Cross } from 'akar-icons'
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
+import { TextAlignJustified, Cross } from 'akar-icons';
 
 const NavbarItem = props => {
   return (
     <Link href={props.href}>
       <a
         onClick={props.customOnClick}
-        className="w-max text-gray-900 tracking-wider text-lg lg:text-base px-4 py-2 hover:bg-yellow-200 rounded-full transtion-all duration-300"
-      >
+        className='w-max px-4 py-2 text-black tracking-wide font-light  hover:bg-yellow-300 rounded-full transtion-all duration-200'>
         {props.title}
       </a>
     </Link>
-  )
-}
+  );
+};
 
 export default function Navbar() {
-  const [active, setActive] = useState('')
-  const [animation, setAnimation] = useState('animate-slideIn')
+  const [active, setActive] = useState('');
+  const [animation, setAnimation] = useState('animate-slideIn');
 
   useEffect(() => {
-    window.innerWidth < 768 ? setActive(false) : setActive(true)
-  }, [])
+    window.innerWidth < 768 ? setActive(false) : setActive(true);
+  }, []);
 
   const items = [
     {
@@ -40,32 +39,29 @@ export default function Navbar() {
       title: 'Contacto',
       href: '/contact',
     },
-  ]
-
-  const isActive = active ? '' : 'hidden'
+  ];
 
   const handleClick = () => {
     if (window.innerWidth < 768) {
-      setAnimation('animate-slideOut')
+      setAnimation('animate-slideOut');
       setTimeout(() => {
-        setActive(false)
-      }, 500)
+        setActive(false);
+      }, 300);
     }
-  }
+  };
 
   return (
     <>
-      <nav className={`w-screen bg-gray-50 fixed top-0 shadow z-40`}>
+      <nav className={`w-screen bg-white fixed top-0 shadow z-40`}>
         <div
           className={
             active
-              ? `absolute lg:relative bg-gray-50 w-full lg:w-10/12 mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-center gap-4 py-6 lg:py-2 pl-6 lg:pl-0 ${animation}`
+              ? `absolute lg:relative py-6 lg:py-2 pl-6 lg:pl-0 bg-gray-50 w-full lg:w-10/12 mx-auto flex flex-col lg:flex-row lg:items-center lg:justify-center gap-4 ${animation}`
               : 'hidden'
-          }
-        >
-          <div className="ml-4 lg:m-0  h-12 w-12 inline-block bg-logo bg-cover bg-center bg-no-repeat rounded-full"></div>
+          }>
+          <div className='ml-4 lg:m-0  h-8 w-8 inline-block bg-logo bg-cover bg-center bg-no-repeat rounded-full'></div>
 
-          <div className="flex flex-col lg:flex-row w-full justify-center">
+          <div className='w-full flex flex-col lg:flex-row justify-center gap-4'>
             {items.map((item, index) => (
               <NavbarItem
                 key={index}
@@ -78,24 +74,23 @@ export default function Navbar() {
         </div>
       </nav>
       <button
-        className="fixed top-4 right-6 lg:hidden z-40 focus:outline-none"
+        className='fixed top-4 right-6 lg:hidden z-40 focus:outline-none'
         onClick={() => {
-          setAnimation(active ? 'animate-slideOut' : 'animate-slideIn')
+          setAnimation(active ? 'animate-slideOut' : 'animate-slideIn');
           setTimeout(() => {
-            setActive(!active)
-          }, 500)
-        }}
-      >
+            setActive(!active);
+          }, 500);
+        }}>
         {active ? (
-          <Cross size={30} className="text-pink-500" strokeWidth={3} />
+          <Cross size={30} className='text-pink-500' strokeWidth={3} />
         ) : (
           <TextAlignJustified
             size={36}
-            className="text-pink-500"
+            className='text-pink-500'
             strokeWidth={3}
           />
         )}
       </button>
     </>
-  )
+  );
 }

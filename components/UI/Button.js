@@ -1,48 +1,47 @@
-import React from 'react'
+import React from 'react';
 
 export default function Button({ children, customClass = ``, ...rest }) {
   return (
     <button
-      className={`py-2 px-6 rounded-full shadow-lg transform hover:-translate-y-1 transition-all duration-300 text-white ${customClass}`}
-      {...rest}
-    >
+      className={`py-2 px-6 rounded-full shadow-lg font-light transform hover:-translate-y-1 transition-all duration-300 text-white ${customClass}`}
+      {...rest}>
       {children}
     </button>
-  )
+  );
 }
 
-const ButtonPrimary = ({ children, spacing }) => {
+const ButtonPrimary = ({ children, spacing, fontSize = 'text-lg' }) => {
   return (
     <Button
-      customClass={`text-lg bg-yellow-500 filter hover:brightness-125 ${spacing}`}
-    >
+      customClass={`${fontSize} bg-yellow-500 filter hover:brightness-125 ${spacing}`}>
       {children}
     </Button>
-  )
-}
+  );
+};
 
-const ButtonSecondary = ({ children, spacing }) => {
+const ButtonSecondary = ({
+  children,
+  spacing,
+  fontSize = 'text-lg',
+  ...rest
+}) => {
   return (
     <Button
-      customClass={`text-lg bg-pink-500 filter hover:brightness-125 ${spacing}`}
-    >
-      {children}
-    </Button>
-  )
-}
-
-ButtonSecondary.displayName = 'ButtonSecondary'
-ButtonPrimary.displayName = 'ButtonPrimary'
-
-function MenuButton({ children, spacing, ...rest }) {
-  return (
-    <Button
-      customClass={`text-base text-yellow-500 bg-transparent border border-yellow-500 hover:text-white hover:bg-yellow-500 filter hover:brightness-125 ${spacing}`}
       {...rest}
-    >
+      customClass={`${fontSize} bg-pink-500 filter hover:brightness-125 ${spacing}`}>
       {children}
     </Button>
-  )
+  );
+};
+
+function MenuButton({ children, spacing, fontSize, ...rest }) {
+  return (
+    <Button
+      customClass={`text-base text-pink-700 bg-transparent border border-pink-700 hover:text-white hover:bg-pink-700 filter hover:brightness-125 ${spacing}`}
+      {...rest}>
+      {children}
+    </Button>
+  );
 }
 
-export { ButtonPrimary, ButtonSecondary, MenuButton }
+export { ButtonPrimary, ButtonSecondary, MenuButton };
